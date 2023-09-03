@@ -35,7 +35,7 @@ public class CompanyTest
 
         verify(aCompany).setName(proposedName);
 
-        assertNotNull(aCompany.getName());
+        assertEquals(aCompany.getName(), proposedName);
     }
 
     @Test

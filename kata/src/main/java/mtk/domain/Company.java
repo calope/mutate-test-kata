@@ -21,7 +21,7 @@ public class Company
 
     public void setName(String newName)
     {
-        this.name = name;
+        this.name = newName;
     }
 
     public void addEmployee(Employee newEmployee)
