@@ -29,7 +29,7 @@ public class Employee
      */
     public void setName(String newName)
     {
-        this.name = newName.replaceAll(" ", "");
+        this.name = newName.trim();
     }
 
     public double getSalary()

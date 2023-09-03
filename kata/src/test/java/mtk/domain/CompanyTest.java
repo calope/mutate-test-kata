@@ -45,6 +45,8 @@ public class CompanyTest
         assertEquals("Bob", employee1.getName());
         Employee employee2 = new Employee("002", "Alice  ", 100_000.00);
         assertEquals("Alice", employee2.getName());
+        Employee employee3 = new Employee("002", "Mr Wonderful", 100_000.00);
+        assertEquals("Mr Wonderful", employee3.getName());
     }
 
     @Test
