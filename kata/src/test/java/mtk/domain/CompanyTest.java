@@ -52,8 +52,8 @@ public class CompanyTest
     @Test
     public void employeeWithLargestSalary()
     {
-        this.company.addEmployee(new Employee("001", "Alice", 120_000.00));
         this.company.addEmployee(new Employee("002", "Bob",   115_000.00));
+        this.company.addEmployee(new Employee("001", "Alice", 120_000.00));
         this.company.addEmployee(new Employee("003", "Carl",  110_000.00));
 
         Employee highestEarner = this.company.employeeWithLargestSalary();

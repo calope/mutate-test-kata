@@ -67,12 +67,12 @@ public class Company
     {
         Employee found = this.employees.get(0);
 
-        for (int i = 0; i < employees.size(); i++)
+        for (int i = 1; i < employees.size(); i++)
         {
             Employee employee = employees.get(i);
-            if (employee.getSalary() < found.getSalary())
+            if (employee.getSalary() > found.getSalary())
             {
-                employee = found;
+                found = employee;
             }
         }
 
