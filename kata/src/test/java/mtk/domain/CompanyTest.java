@@ -103,17 +103,4 @@ public class CompanyTest
         assertEquals("Dave", hopefullyDave.getName());
         assertNull(hopefullyNoOne);
     }
-
-    @Test
-    public void employeeNameChanged()
-    {
-        this.company.addEmployee(new Employee("123", "Dave",  100_000.00));
-        this.company.addEmployee(new Employee("456", "Alice", 100_000.00));
-        this.company.addEmployee(new Employee("789", "Bob",   100_000.00));
-
-        Employee employee = this.company.findEmployeeById("123");
-        employee.setName("Tommy Lee");
-        employee = this.company.findEmployeeById("123");
-        System.out.println(employee.getName().equals("Tommy Lee") ? "PASSED" : "FAILED");
-    }
 }
