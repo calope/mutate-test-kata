@@ -99,6 +99,9 @@ public class CompanyTest
 
         Employee hopefullyDave = this.company.findEmployeeById("123");
         Employee hopefullyNoOne = this.company.findEmployeeById("999");
+
+        assertEquals("Dave", hopefullyDave.getName());
+        assertNull(hopefullyNoOne);
     }
 
     @Test

@@ -51,11 +51,10 @@ public class Company
         {
             if (this.employees.get(i).getId().equals(id))
             {
-                foundIndex = i;
-                break;
+                return this.employees.get(i);
             }
         }
-        return this.employees.get(foundIndex);
+        return null;
     }
 
     public int numberOfEmployees()
