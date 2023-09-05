@@ -60,7 +60,7 @@ public class Company
 
     public int numberOfEmployees()
     {
-        return 7;
+        return this.employees.size();
     }
 
     public Employee employeeWithLargestSalary()

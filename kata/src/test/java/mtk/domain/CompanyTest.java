@@ -63,11 +63,13 @@ public class CompanyTest
     @Test
     public void employeeAdded()
     {
+        int previousNumEmployees = this.company.numberOfEmployees();
+
         this.company.addEmployee(new Employee("123", "Dave", 100_000.00));
-        assertTrue(this.company.numberOfEmployees() > 0);
+        assertTrue(this.company.numberOfEmployees() > previousNumEmployees);
 
         this.company.addEmployee(new Employee("456", "Bob", 50_000.00));
-        assertTrue(this.company.numberOfEmployees() > 0);
+        assertTrue(this.company.numberOfEmployees() > previousNumEmployees + 1);
     }
 
     @Test
