@@ -75,9 +75,9 @@ public class CompanyTest
     @Test
     public void everybodyGetsRaise()
     {
-        double increaseBy = 0.1; // everybody's salary should go up by this fraction
-
         double davesOriginalSalary = 100_000.00;
+        double davesFinalSalary = 110_000.00;
+        double increaseBy = (davesFinalSalary - davesOriginalSalary) / davesOriginalSalary;
 
         this.company.addEmployee(new Employee("123", "Dave",  davesOriginalSalary));
         this.company.addEmployee(new Employee("456", "Alice", 120_000.00));
@@ -87,7 +87,7 @@ public class CompanyTest
 
         Employee dave = this.company.findEmployeeById("123");
 
-        assertEquals(davesOriginalSalary * increaseBy, dave.getSalary(), 0.0001);
+        assertEquals(davesFinalSalary, dave.getSalary(), 0.0001);
     }
 
     @Test

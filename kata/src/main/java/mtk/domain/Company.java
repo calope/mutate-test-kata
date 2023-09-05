@@ -36,7 +36,7 @@ public class Company
      */
     public void everybodyGetsRaiseBy(double incrementAsFraction)
     {
-        this.employees.forEach(e -> e.setSalary(e.getSalary() * incrementAsFraction));
+        this.employees.forEach(e -> e.setSalary(e.getSalary() * (1 + incrementAsFraction)));
     }
 
     /**
